@@ -218,8 +218,8 @@ Un nodo no representa necesariamente una pagina de la aplicación web, sin embar
  significa que se puede alcanzar desde cualquier otro nodo de diagrama de navegación.
 
 ****Asociaciones****
- *  nLinks : Link [&42;]  La colección de enlaces que apuntan al nodo.
- *  outLinks : Link [&42;] La colección de enlaces que se originan en el nodo.
+ *  nLinks : Link [&#42;]  La colección de enlaces que apuntan al nodo.
+ *  outLinks : Link [&#42;] La colección de enlaces que se originan en el nodo.
 
 ###4.1.2. Link###
 
@@ -242,7 +242,7 @@ simultáneamente o si el usuario ha pulsado en un ancla para navegar de un nodo 
  destino por adaptabilidad, esto no esta descrito en esta versión del documento.
 
 
-4.1.3. NavigationClass
+###4.1.3. NavigationClass###
 
 Una clase de navegación representa un nodo navegable de la estructura de hipertexto y establece la
 conexión entre el modelo de navegación y el modelo de contenido. Una clase de navegación que esta 
@@ -259,13 +259,13 @@ instancia de esa clase.
 **Asociaciones**
  *  contentclass : Class [0..1] La clase del modelo de contenido que especifica el 
  contenido de la clase de navegación.
- *  menus : Menu [&42;] La colección de todos los menús que son alcanzables
+ *  menus : Menu [&#42;] La colección de todos los menús que son alcanzables
  directamente desde la clase de navegación. p.e. menús que 
  compuestos por enlaces de navegación que se originan de la clase de navegación.
- *  navigationProperty : NavigationProperty [&42;] { subsets ownedAttribute } 
+ *  navigationProperty : NavigationProperty [&#42;] { subsets ownedAttribute } 
  La colección de propiedades de navegación que define  el contenido de la clase de navegación.
 
-4.1.4. NavigationProperty
+###4.1.4. NavigationProperty###
 
 Los atributos de una clase de navegación son llamados propiedades de navegación. Estos definen el contenido 
 de los elementos de la UI (User Interface). El valor de una propiedad de navegación es tomado también de una propiedad
@@ -296,7 +296,7 @@ Sin atributos adicionales.
 Asociación
 Sin asociaciones adicionales.
 
-4.1.6. Menu
+###4.1.6. Menu###
 
 Un menú se usa para manejar rutas de navegación alternativas. Nótese que un menú en el modelo
 de navegación no se muestra siempre como un menú en el sentido de la interfaces de usuario. Esto se debe 
@@ -331,10 +331,10 @@ constituyen el contenido de las clases de navegación.
  Sin atributos adicionales
 
 **Asociaciones**
- *  accessedAttributes: NavigationProperty [&42;]  Una colección de propiedades 
+ *  accessedAttributes: NavigationProperty [&#42;]  Una colección de propiedades 
  de navegación que son usadas para seleccionar la instancia de la clase de contenido.
 
-4.1.8.  Index
+###4.1.8.  Index###
 
 Un index(índice) permite seleccionar una instancia de la clase de contenido de un conjunto de instancias que 
 han sido colectadas mientras se navega. Esto significa que un conjunto de instancias de la clase de contenido se toma
@@ -369,7 +369,7 @@ Sin atributos adicionales
 Sin atributos adicionales
 
 
-4.1.9  Query
+###4.1.9  Query###
 
 Una consulta (query) es usada para obtener contenido desde una fuente de datos. A diferencia de un índice, una consulta no
 da un conjunto de instancias de clase de contenido de un predecesor de la ruta de navegación, pero si desde una
@@ -395,7 +395,7 @@ desde la base de dato de películas.
 
  Sin asociaciones adicionales
 
-4.1.10  GuideTour (Paseo Guiado)
+###4.1.10  GuideTour (Paseo Guiado)###
 
 Un paseo guiado provee procesos secuenciales para instancias de clase de navegación. Esto es dado
 un conjunto ordenado de instancias de clase de contenido como entrada y teniendo una enlace de navegación saliente a una
@@ -417,7 +417,7 @@ cual la instancias son visitadas se especifica usando una expresión de filtrado
 Sin asociaciones adicionales.
 
 
-5.  Paquete de Presentación 
+##5.  Paquete de Presentación##
 
 El modelo de presentación provee una vista abstracta de la interfaz de usuario (UI) de una aplicación
 web. Este se basa en el modelo de navegación. El modelo de presentación se abstrae de aspectos
@@ -445,7 +445,10 @@ descripción anterior, un grupo de presentación crea un conjunto de arboles de 
 
 
 ![picture alt](/images/photo.jpeg "Title is optional")
+
 Figura 4: La columna vertebral del Paquete de Presentación
 
+
 ![picture alt](/images/photo.jpeg "Title is optional")
+
 Figura 5: Elementos de Presentación
