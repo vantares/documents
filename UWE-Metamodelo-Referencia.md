@@ -5,14 +5,18 @@
 
 Programming and Software Engineering Unit (PST) 
 Institute for Informatics 
+
 Ludwig-Maximilians-Universität München, Germany 
 Programming and Software Engineering (PST) 
+
 www.pst.ifi.lmu.de/projekte/uwe 
+
 February 2008  
 
 Esta investigación ha sido parcialmente respaldada por el proyecto MAEWA
-Model Driven Development de 
+Model Driven Development of
 Web Applications (WI841/7-1) de la Deutsche Forschungsgemeinschaft (DFG), Alemania y la EC 6th Framework proyecto SENSORIA
+
 Software Engineering for Service-Oriented Overlay Computers (IST 016004). 
 
 
@@ -22,7 +26,9 @@ Software Engineering for Service-Oriented Overlay Computers (IST 016004).
 2.  PAQUETE DE REQUERIMIENTOS
 3.  PAQUETE DE CONTENIDOS
 4.  PAQUETE DE NAVEGACIÓN
+
     4.1. DESCRIPCIÓN DE CLASES 
+
         4.1.1.  Node
         4.1.2.  Link
         4.1.3.  NavigationClass
@@ -33,8 +39,11 @@ Software Engineering for Service-Oriented Overlay Computers (IST 016004).
         4.1.8.  Index
         4.1.9.  Query
         4.1.10.  GuidedTour
+
 5.  PAQUETE DE PRESENTACIÓN
+
     5.1.  DESCRIPCIÓN DE CLASES
+
         5.1.1.  PresentationElement
         5.1.2.  PresentationClass   
         5.1.3.  PresentationProperty
@@ -50,29 +59,38 @@ Software Engineering for Service-Oriented Overlay Computers (IST 016004).
         5.1.13.  Image
         5.1.14.  TextInput
         5.1.15.  Choice
+
 6.  PAQUETE DE PROCESOS
+
     6.1.  DESCRIPCIÓN DE CLASES
+
         6.1.1.  ProcessClass
         6.1.2.  ProcessLink
         6.1.3.  ProcessProperty
         6.1.4.  UserAction
+
 7.  UWE DESCRIPCIÓN
+
 8.  EJEMPLO: PORTAL SENCILLO DE MÚSICA
+
     8.1.  CASOS DE USO
     8.2.  MODELO DE CONTENIDO
     8.3.  MODELO DE USUARIO
     8.4.  MODELO DE NAVEGACIÓN
     8.5.  PROCESO DE NEGOCIOS
+
         8.5.1.  Proceso Login
         8.5.2.  Proceso Logout
         8.5.3.  Proceso BuyAlbum
         8.5.4.  Proceso Register
         8.5.5.  Proceso Recharge
+
     8.6.  MODELO DE PRESENTACIÓN
+
 REFERENCIAS
 
 
-1. Introducción
+##1. Introducción##
 
 Las propuestas de Modelado Web esta orientado por la separacion de los aspectos que describen un sistema web,
 tales como contenido, estructura de hipertexto, presentacion, y procesos. La propuesta Ingeniería web
