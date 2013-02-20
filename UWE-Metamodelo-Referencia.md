@@ -129,15 +129,15 @@ Software Engineering for Service-Oriented Overlay Computers (IST 016004).
 
 ##1. Introducción##
 
-Las propuestas de Modelado Web esta orientado por la separacion de los aspectos que describen un sistema web,
-tales como contenido, estructura de hipertexto, presentacion, y procesos. La propuesta Ingeniería web
+Las propuestas de Modelado Web esta orientado por la separación de los aspectos que describen un sistema web,
+tales como contenido, estructura de hipertexto, presentación, y procesos. La propuesta Ingeniería web
 basada en UML (UWE por sus siglas en Ingles) provee un conjunto de elementos específicos del modelo de dominio web para
 el modelado de diferentes aspectos. Estos elementos del modelo y las relaciones entre ellos
-estan especificados por el meta-modelo.
+están especificados por el meta-modelo.
 
-El meta-modelo UWE como una extension conservadora del meta-modelo de UML 2.0.
+El meta-modelo UWE como una extensión conservadora del meta-modelo de UML 2.0.
 Entendiendo por conservadora que los elementos dl meta-modelo de UML no ha sido modificado.
-En lugar de ello, todos los nuevos elementos del meta-modelo UWE estan relacionados por herencia con al menos
+En lugar de ello, todos los nuevos elementos del meta-modelo UWE están relacionados por herencia con al menos
 un elemento del meta-modelo UML. Hemos definido propiedades y relaciones adicionales
 para estos nuevos elementos. De forma análoga a loque dictan las buenas prácticas en la especificación de UML,
 usamos restriciones OCL para especificar la semantica adicional de estos nuevos elementos.
@@ -158,17 +158,18 @@ reflejado por la estructura del paquete Core, la separacion de la adaptacion por
 de Adaptivity con Core.
 
 
-![picture alt](/images/photo.jpeg "Title is optional")
-Figura 1: Vista general del meta-modelo UWE.
+![Vista general del meta-modelo UWE.](/images/ "UWE Meta Modelo")
+
+_Figura 1: Vista general del meta-modelo UWE._
 
 
-2. Paquete Requirements (Requerimientos)
+##2. Paquete Requirements (Requerimientos)##
 
 El paquete Requirements contiene las extensiones UWE que son usadas en modelos de casos de uso para discernimiento 
 navegacional desde procesos de negocios y casos de uso personalizados, y las extensiones para diagramas de
 actividad. Los detalles adicionales acerca de estos elementos seran proporcionados en la siguiente versión de este reporte.
 
-3. Paquete Content (Contenido)
+##3. Paquete Content (Contenido)##
 
 El modelado de contenidos para aplicaciones web con UWE no difiere del modelado de contenidos de 
 software no web. Por esta razón, usamos elementos del modelo UML para modelar la estructura de
@@ -179,7 +180,7 @@ Las aplicaciones web personalizadas requieren el modelado de características de
 o modelo del usuario puede ser usado para representar estas caracteristicas separando el perfil del usuario del 
 modelo de contenido.
 
-4. Paquete Navigation (Navegacion)
+##4. Paquete Navigation (Navegacion)##
 
 El meta-modelo de navegación de UWE se muestra en la Figura 2.
 La espina dorsal del meta-modelo de navegación es el par de metaclases abstractas Node(Nodo)
@@ -190,35 +191,37 @@ Menu y las promitivas de acceso Index, GuideTour y Query:
 
 
 ![picture alt](/images/photo.jpeg "Title is optional")
-Figura 2: El Paquete de Navegación
+
+_Figura 2: El Paquete de Navegación_
 
 Las relación entre los elementos del modelo del paquete de Navegación y las clases UML usadas para 
 modelar el contenido de una aplicación web se muestra en la Figura 3.
 
 ![picture alt](/images/photo.jpeg "Title is optional")
-Figura 3: Relaciones del paquete de Navegación con UML 
 
-4.1. Descripción de clases
+_Figura 3: Relaciones del paquete de Navegación con UML_
 
-4.1.1. Node (Nodo)
+##4.1. Descripción de clases##
+
+###4.1.1. Node (Nodo)###
 
 Hablando de manera abstracta, un nodo puede ser cualquier tipo de nodo en un gráfico de navegación. Es significa
 generalmente que cuando se alcanza un nodo mientras se navega, se provee al usuario con alguna
 información y opcionalmente se le ofrece la posibilidad de realizar una o mas acciones.
 Un nodo no representa necesariamente una pagina de la aplicación web, sin embargo es posible que sea así.
 
-Generalizaciones
+**Generalizaciones**
  *  Class (de UML)
 
-Atributos
+****Atributos****
  *  isLandmark : Booleano especifica cuando en nodo es un marcador, lo cual
  significa que se puede alcanzar desde cualquier otro nodo de diagrama de navegación.
 
-Asociaciones 
- *  nLinks : Link [*]  La colección de enlaces que apuntan al nodo.
- *  outLinks : Link [*] La colección de enlaces que se originan en el nodo.
+****Asociaciones****
+ *  nLinks : Link [&42;]  La colección de enlaces que apuntan al nodo.
+ *  outLinks : Link [&42;] La colección de enlaces que se originan en el nodo.
 
-4.1.2. Link
+###4.1.2. Link###
 
 Un link (enlace) es una linea del diagrama de navegación y por tanto conecta dos nodos. Recordemos
 que un nodo no siempre representa una página, un enlace no tiene que representar una página
@@ -226,16 +229,16 @@ de transición que se desencadena por una acción del usuario. Como menciono en 
 define en cualquier caso la información de dos nodos que se encuentran conectados por un enlace que es mostrado al 
 simultáneamente o si el usuario ha pulsado en un ancla para navegar de un nodo a otro (ver la sección 5 para más información)
 
-Generalización 
+**Generalización** 
  *  Association (de UML)
 
-Atributos
+**Atributos**
  *  isAutomatic : Booleano Este atributo permite especificar de forma explícita que no se
  requiere decisión del usuario para seguir el enlace.
 
-Asociaciones
+**Asociaciones**
  *  source : Node [1] El nodo de origen del enlace.
- *  target : Node [1..*] El nodo destino del enlace. Se utilizan multiples nodos
+ *  target : Node [1..&#42;] El nodo destino del enlace. Se utilizan multiples nodos
  destino por adaptabilidad, esto no esta descrito en esta versión del documento.
 
 
@@ -246,20 +249,20 @@ conexión entre el modelo de navegación y el modelo de contenido. Una clase de 
 asociada con una clase del modelo de contenido es traducida para representar el contenido de una 
 instancia de esa clase.
 
-Generalización
+**Generalización**
 
  *  Node
 
-Atributos
+**Atributos**
  Sin atributos adicionales
 
-Asociaciones
+**Asociaciones**
  *  contentclass : Class [0..1] La clase del modelo de contenido que especifica el 
  contenido de la clase de navegación.
- *  menus : Menu [*] La colección de todos los menús que son alcanzables
+ *  menus : Menu [&42;] La colección de todos los menús que son alcanzables
  directamente desde la clase de navegación. p.e. menús que 
  compuestos por enlaces de navegación que se originan de la clase de navegación.
- *  navigationProperty : NavigationProperty [*] { subsets ownedAttribute } 
+ *  navigationProperty : NavigationProperty [&42;] { subsets ownedAttribute } 
  La colección de propiedades de navegación que define  el contenido de la clase de navegación.
 
 4.1.4. NavigationProperty
@@ -275,11 +278,11 @@ indicando que información es relevante. Si la clase de navegación no tiene nin
 entonces cada propiedad de la clase de contenido es de forma implícita representada por una propiedad de navegación 
 "virtual" con el mismo nombre.
 
-Generalización
+**Generalización**
 
  *  Property (de UML)
 
-Atributos
+**Atributos**
 
  *  selectionExpresion : String [0..1] Una expresión que tiene el mismo tipo
  que la propiedad de navegación y que es usada para derivar un valor
@@ -287,7 +290,7 @@ Atributos
  El contexto de la expresión (el mismo en OCL) es la clase de contenido que
  esta asociada con la clase de navegación.
 
-Atributos
+**Atributos**
 Sin atributos adicionales.
 
 Asociación
@@ -302,15 +305,15 @@ en el modelo de presentación (ver sección 5). En este caso, el usuario no tien
 seguir la ruta de navegación, lo cual debe ser el comportamiento esencial de un menú en cualquier 
 interfaz de usuario.
 
-Generalizaciones
+**GEneralizaciones**
 
  *  Link
 
-Atributos
+**Atributos**
 
  Sin atributos adicionales
 
-Asociaciones
+**Asociaciones**
 
  *  navigationClass : NavigationClass [0..1] La clase de navegación que es el origen de 
  todas las rutas de navegación a través del menú.
@@ -321,14 +324,14 @@ Asociaciones
  Las primitivas de acceso son usadas para seleccionar las instancias de las clases de contenido que 
 constituyen el contenido de las clases de navegación.
 
-Generalizaciones
+**GEneralizaciones**
  *  Node
 
-Atributos
+**Atributos**
  Sin atributos adicionales
 
-Asociaciones
- *  accessedAttributes: NavigationProperty [*]  Una colección de propiedades 
+**Asociaciones**
+ *  accessedAttributes: NavigationProperty [&42;]  Una colección de propiedades 
  de navegación que son usadas para seleccionar la instancia de la clase de contenido.
 
 4.1.8.  Index
@@ -353,15 +356,15 @@ Existen tres clases diferentes:
  es un role navegable nombrado ownedAlbums. Esto significa que el conjunto de entrada de álbumes 
  para UserAlbumIndex se toma del rol ownedAlbums de la clase Usuario desde el modelo usuario (ver sección 8.3).
 
-Generalización
+**Generalización**
 
  *  AccessPrimitive
 
-Atributos
+**Atributos**
 
 Sin atributos adicionales
 
-Asociaciones
+**Asociaciones**
 
 Sin atributos adicionales
 
@@ -380,15 +383,15 @@ Si la consulta no requiere parámetros, esta se ejecuta automáticamente cuando 
 gráfico de navegación. Un ejemplo puede ser una consulta que retorne las 10 películas mas populares actualmente
 desde la base de dato de películas.
 
-Generalización
+**Generalización**
 
  *  AccessPrimitive
 
-Atributos
+**Atributos**
 
  *  filterExpression : String [0..1] Una expresión que describe la semántica de la consulta.
 
-Asociaciones
+**Asociaciones**
 
  Sin asociaciones adicionales
 
@@ -400,16 +403,16 @@ clase de navegación. El usuario puede ir hacia atrás y hacia adelante a travé
 seleccionando una instancia a la vez como contenido para la clase de navegación cargada. El orden en el
 cual la instancias son visitadas se especifica usando una expresión de filtrado.
 
-Generalización
+**Generalización**
 
  *  AccessPrimitive
 
-Atributos
+**Atributos**
 
  *  filterExpression : String [0..1] Una expresión que es usada para calcular el orden in el cual
  las instancias de la clase de navegación son visitadas.
 
-Asociaciones
+**Asociaciones**
 
 Sin asociaciones adicionales.
 
