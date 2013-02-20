@@ -9,10 +9,10 @@ February 2008
  
                                                                                                                             
  
-UWE Metamodel and Profile - User Guide and Reference 
  
  
-The UWE Metamodel and Profile - User Guide and Reference 
+ 
+The  
 Version 1.0 - February 2008 
  
 Christian Kroiß and Nora Koch 
@@ -29,7 +29,7 @@ Web Applications (WI841/7-1) of the Deutsche Forschungsgemeinschaft (DFG), Germa
 Software Engineering for Service-Oriented Overlay Computers (IST 016004). 
 
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
  
 Table of Contents 
 1 INTRODUCTION 
@@ -388,52 +388,11 @@ In contrast to presentation classes and pages, a presentation group defines a se
 presentation classes that are shown alternatively, depending on navigation. In the sense of the 
 description above, a presentation group creates a set of alternative inclusion trees. 
  
-PresentationElement
-Class1
-(UML)
--class0..1
-PresentationClassNodeUIElement-node
-*
-(Navigation)
-10..1
--isLandmark : Boolean
--isHome : Boolean
-PresentationGroupPage
--ownedAttribute-default0..1
-*
-PresentationPropertyProperty*
-(UML)
-{subsets ownedAttribute}
-*0..1*
-NavigationProperty
-(Navigation)
--navigationProperty
--selectionExpression : String [0..1]
- 
 Figure 4: The Backbone of the Presentation Package 
-12 
-
-
-
---------------------------------------- 13
-
-UWE Metamodel and Profile - User Guide and Reference 
  
-PresentationClass
-1
-{subsets ownedAttribute}*
-PresentationElementPresentationProperty*
-1
-UIElement-elements
-*
-0..1
-ChoiceButtonTextInputImageTextUIContainerAnchor-anchors
--multiple : Boolean1..*
-{subsets elements}-link0..1
-Link
-AnchoredCollectionForm
  
 Figure 5: Presentation Elements 
+
 5.1 Class Descriptions 
 5.1.1 PresentationElement 
 PresentationElement is the abstract super class of all model elements of the presentation 
@@ -460,7 +419,7 @@ Associations
 
 --------------------------------------- 14
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 presentation class.  
 · presentationProperty :  The collection of presentation properties that 
 PresentationProperty [*] constitute the content of the presentation class. 
@@ -505,7 +464,7 @@ No additional associations.
 
 --------------------------------------- 15
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 5.1.5 PresentationGroup 
 A presentation group is used to define a set of presentation classes whose contents are shown 
 alternatively on the same area of the page, depending on navigation. If a navigation node is 
@@ -554,7 +513,7 @@ No additional attributes.
 
 --------------------------------------- 16
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 Associations 
 · uiContainer : UIContainer  The UIContainer that contains the UIElement. 
 [0..1]  
@@ -594,7 +553,7 @@ HTML, for example, both an anchor element (<a>) as well as a button may be used.
 
 --------------------------------------- 17
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
  Generalizations 
 · UIElement on page 15 
 Attributes 
@@ -635,7 +594,7 @@ specifying the location of an image file or directly as image data in any format
 
 --------------------------------------- 18
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
  Generalizations 
 · UIElement on page 15 
 Attributes 
@@ -677,7 +636,7 @@ UWE web application model. This can be separated into three tasks:
 
 --------------------------------------- 19
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
  
 · Integration of business processes into the navigation model 
 This is enabled by the two metaclasses ProcessClass and ProcessLink that extend 
@@ -735,7 +694,7 @@ using UML CallBehaviorActions.
 
 --------------------------------------- 20
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
  
 The model elements presented above and the relationships between them are shown in 
 Figure 6. These model elements are described in the following subsections.  
@@ -793,7 +752,7 @@ No additional attributes
 
 --------------------------------------- 21
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 Associations 
 · processActivity : Activity  The UML activity that defines the process flow. 
 [0..1]  This is only used for the main process class of a 
@@ -839,7 +798,7 @@ flow is continued. The data that has been entered in the user interface elements
 
 --------------------------------------- 22
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 output pins of the user action that are named equal to the process properties that back up the 
 UI elements (see section 6.1.3). Analogically, input pins can be used to define that data from 
 the activity’s object flow should be displayed by the corresponding UI elements. 
@@ -889,7 +848,7 @@ UWE stereotype UML base class Used in  Icon
 
 --------------------------------------- 23
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 UWE stereotype UML base class Used in  Icon 
 «presentation property» property presentation model  
 «process class» class navigation/process model 
@@ -910,7 +869,7 @@ Table 1: UWE Stereotypes
 
 --------------------------------------- 24
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 8 Example: Simple Music Portal 
 The following example is meant to illustrate as many of the issues discussed in this document 
 as possible. It models a very simple music portal web application that allows users to buy 
@@ -963,7 +922,7 @@ songs as well as transactional functionality, such as recharging and downloading
 
 --------------------------------------- 25
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 MusicPortal
 SearchAlbum
 <<extend>>
@@ -1010,7 +969,7 @@ Figure 8: Music Portal Content Model
 
 --------------------------------------- 26
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 8.3 User Model 
 The separation in user model and content model is a decision that is up to the modeller. Only 
 plain UML elements are used as no additional semantics applies. While the content model 
@@ -1074,7 +1033,7 @@ Figure 9: Music Portal User Model
 
 --------------------------------------- 27
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 8.4 Navigation Model 
 The navigation model of the example is designed as described in section 4. The navigation is 
 strongly simplified and is mainly intended to demonstrate the use of the model elements than 
@@ -1143,7 +1102,7 @@ flow.
 
 --------------------------------------- 28
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 <<processClass>><<processClass>>
 LoginBuyAlbum
 -userName : String
@@ -1177,7 +1136,7 @@ and Recharge are shown in Figure 12 to Figure 16.
 
 --------------------------------------- 29
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 8.5.1 Process Login 
 activity LoginLogin[   ]
 This Java-like notation for the names of Call 
@@ -1210,7 +1169,7 @@ Figure 12:  UML Activity Diagram for the Process Login
 
 --------------------------------------- 30
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 8.5.2 Process Logout 
 activity LogoutLogout[   ]
 target
@@ -1244,7 +1203,7 @@ Figure 14: UML Activity Diagram for the Process BuyAlbum
 
 --------------------------------------- 31
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 8.5.4 Process Register 
 activity RegisterRegister[   ]
 <<userAction>>
@@ -1274,7 +1233,7 @@ Figure 15: UML Activity Diagram for the Process Register
 
 --------------------------------------- 32
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 8.5.5 Process Recharge 
 RechargeRechargeactivity [   ]
 target
@@ -1316,7 +1275,7 @@ Figure 16: UML Activity Diagram for the Process Recharge
 
 --------------------------------------- 33
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
  
 8.6 Presentation Model 
 The presentation model of the example is shown as a UML composite structure diagram. In 
@@ -1364,7 +1323,7 @@ related to the links from MainMenu to the respective process or navigation class
 
 --------------------------------------- 34
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
  
 presentationpresentationpackage [   ]
 <<presentationPage>><<presentationClass>>
@@ -1455,7 +1414,7 @@ Figure 17: Music Portal Presentation Model
 
 --------------------------------------- 35
 
-UWE Metamodel and Profile - User Guide and Reference 
+ 
 References 
 [1] Nora Koch, Alexander Knapp, Gefei Zhang and Hubert Baumeister. UML-based Web 
 Engineering: An Approach based on Standards (book chapter). In Web Engineering: Modelling 
