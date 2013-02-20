@@ -7,19 +7,17 @@ Institute for Informatics
 Ludwig-Maximilians-Universität München, Germany 
 February 2008  
  
-                                                                                                                            
  
- 
- 
- 
-The  
 Version 1.0 - February 2008 
  
 Christian Kroiß and Nora Koch 
  
 Ludwig-Maximilians-Universität München (LMU), Germany 
+
 Institute for Informatics 
+
 Programming and Software Engineering (PST) 
+
 www.pst.ifi.lmu.de/projekte/uwe 
  
  
