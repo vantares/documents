@@ -27,67 +27,67 @@ Software Engineering for Service-Oriented Overlay Computers (IST 016004).
 3.  PAQUETE DE CONTENIDOS
 4.  PAQUETE DE NAVEGACIÓN
 
-    4.1. DESCRIPCIÓN DE CLASES 
+  4.1. DESCRIPCIÓN DE CLASES 
 
-        4.1.1.  Node
-        4.1.2.  Link
-        4.1.3.  NavigationClass
-        4.1.4.  NavigationProperty
-        4.1.5.  NavigationLink
-        4.1.6.  Menu
-        4.1.7.  AccessPrimitive
-        4.1.8.  Index
-        4.1.9.  Query
-        4.1.10.  GuidedTour
+    4.1.1.  Node
+      4.1.2.  Link
+      4.1.3.  NavigationClass
+      4.1.4.  NavigationProperty
+      4.1.5.  NavigationLink
+      4.1.6.  Menu
+      4.1.7.  AccessPrimitive
+      4.1.8.  Index
+      4.1.9.  Query
+      4.1.10.  GuidedTour
 
 5.  PAQUETE DE PRESENTACIÓN
 
-    5.1.  DESCRIPCIÓN DE CLASES
+  5.1.  DESCRIPCIÓN DE CLASES
 
-        5.1.1.  PresentationElement
-        5.1.2.  PresentationClass   
-        5.1.3.  PresentationProperty
-        5.1.4.  Page
-        5.1.5.  PresentationGroup
-        5.1.6.  UIElement
-        5.1.7.  UIContainer
-        5.1.8.  Form
-        5.1.9.  AnchoredCollection
-        5.1.10.  Anchor
-        5.1.11.  Button
-        5.1.12.  Text
-        5.1.13.  Image
-        5.1.14.  TextInput
-        5.1.15.  Choice
+    5.1.1.  PresentationElement
+    5.1.2.  PresentationClass   
+    5.1.3.  PresentationProperty
+    5.1.4.  Page
+    5.1.5.  PresentationGroup
+    5.1.6.  UIElement
+    5.1.7.  UIContainer
+    5.1.8.  Form
+    5.1.9.  AnchoredCollection
+    5.1.10.  Anchor
+    5.1.11.  Button
+    5.1.12.  Text
+    5.1.13.  Image
+    5.1.14.  TextInput
+    5.1.15.  Choice
 
 6.  PAQUETE DE PROCESOS
 
-    6.1.  DESCRIPCIÓN DE CLASES
+  6.1.  DESCRIPCIÓN DE CLASES
 
-        6.1.1.  ProcessClass
-        6.1.2.  ProcessLink
-        6.1.3.  ProcessProperty
-        6.1.4.  UserAction
+    6.1.1.  ProcessClass
+    6.1.2.  ProcessLink
+    6.1.3.  ProcessProperty
+    6.1.4.  UserAction
 
 7.  UWE DESCRIPCIÓN
 
 8.  EJEMPLO: PORTAL SENCILLO DE MÚSICA
 
-    8.1.  CASOS DE USO
-    8.2.  MODELO DE CONTENIDO
-    8.3.  MODELO DE USUARIO
-    8.4.  MODELO DE NAVEGACIÓN
-    8.5.  PROCESO DE NEGOCIOS
+  8.1.  CASOS DE USO
+  8.2.  MODELO DE CONTENIDO
+  8.3.  MODELO DE USUARIO
+  8.4.  MODELO DE NAVEGACIÓN
+  8.5.  PROCESO DE NEGOCIOS
 
-        8.5.1.  Proceso Login
-        8.5.2.  Proceso Logout
-        8.5.3.  Proceso BuyAlbum
-        8.5.4.  Proceso Register
-        8.5.5.  Proceso Recharge
+    8.5.1.  Proceso Login
+    8.5.2.  Proceso Logout
+    8.5.3.  Proceso BuyAlbum
+    8.5.4.  Proceso Register
+    8.5.5.  Proceso Recharge
 
-    8.6.  MODELO DE PRESENTACIÓN
+ 8.6.  MODELO DE PRESENTACIÓN
 
-REFERENCIAS
+9.  REFERENCIAS
 
 
 ##1. Introducción##
