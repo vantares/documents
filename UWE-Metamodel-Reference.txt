@@ -411,12 +411,6 @@ Attributes
 No additional attributes. 
 Associations 
 · node : Node [0..1]  The navigation node that is rendered by the 
-13 
-
-
-
---------------------------------------- 14
-
  
 presentation class.  
 · presentationProperty :  The collection of presentation properties that 

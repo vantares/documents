@@ -305,7 +305,7 @@ en el modelo de presentación (ver sección 5). En este caso, el usuario no tien
 seguir la ruta de navegación, lo cual debe ser el comportamiento esencial de un menú en cualquier 
 interfaz de usuario.
 
-**GEneralizaciones**
+**Generalizaciones**
 
  *  Link
 
@@ -319,12 +319,12 @@ interfaz de usuario.
  todas las rutas de navegación a través del menú.
 
 
- 4.1.7. AccessPrimitive (Primitivas de acceso)
+###4.1.7. AccessPrimitive (Primitivas de acceso)###
 
  Las primitivas de acceso son usadas para seleccionar las instancias de las clases de contenido que 
 constituyen el contenido de las clases de navegación.
 
-**GEneralizaciones**
+**Generalizaciones**
  *  Node
 
 **Atributos**
@@ -446,9 +446,60 @@ descripción anterior, un grupo de presentación crea un conjunto de arboles de 
 
 ![picture alt](/images/photo.jpeg "Title is optional")
 
-Figura 4: La columna vertebral del Paquete de Presentación
+_Figura 4: La columna vertebral del Paquete de Presentación_
 
 
 ![picture alt](/images/photo.jpeg "Title is optional")
 
-Figura 5: Elementos de Presentación
+_Figura 5: Elementos de Presentación_
+
+
+###5.1  Descripción de clases###
+
+###5.1.1  PresentationElement ###
+
+**Generalización**
+
+ *  Class (UML)
+
+**Atributos**
+
+Sin atributos adicionales.
+
+**Asociaciones**
+
+Sin asociaciones adicionales.
+
+
+###5.1.2 PresentationClass ###
+
+Una clase de presentación define la combinación de elementos de presentación que muestran los contenidos
+de un nodo de mavegación. Si el nodo de navegación asociado es accedido, se muestra el conjunto completos de
+contenidos del correspondiente árbol de inclusión.
+
+**Generalización**
+
+ *  PresentationElement
+
+**Atributos**
+
+Sin atributos adicionales
+
+**Asociaciones**
+
+ *  node : Node [0..1] {subsets ownedAttribute}  El nodo de navegación que representa la clase de presentación.
+ *  presentationProperty : PresentationProperty [&#42;] La colección de propiedades de presentación
+ que constituyen el contenido de la clase de presentación.
+
+
+### ###
+**Generalización**
+**Atributos**
+**Asociaciones**
+
+
+
+### ###
+**Generalización**
+**Atributos**
+**Asociaciones**
